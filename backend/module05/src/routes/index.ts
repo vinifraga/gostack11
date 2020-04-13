@@ -1,11 +1,8 @@
 import { Router } from 'express';
+import appointmetsRouter from './appointments.routes';
 
 const routes = Router();
 
-routes.post('/', (request, response) => {
-  const { name, email } = request.body;
-
-  return response.json({ message: 'Hello GoStack' });
-});
+routes.use('/appointments', appointmetsRouter);
 
 export default routes;
