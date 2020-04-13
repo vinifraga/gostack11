@@ -2,8 +2,10 @@ import { Router } from 'express';
 
 const routes = Router();
 
-routes.get('/', (request, response) =>
-  response.json({ message: 'Hello GoStack' }),
-);
+routes.post('/', (request, response) => {
+  const { name, email } = request.body;
+
+  return response.json({ message: 'Hello GoStack' });
+});
 
 export default routes;
