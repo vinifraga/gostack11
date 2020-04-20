@@ -31,7 +31,8 @@
         "ts": "never"
       }
     ],
-    "class-methods-use-this": "off"
+    "class-methods-use-this": "off",
+    "@typescript-eslint/camelcase": "off"
   },
   "settings": {
     "import/resolver": {
