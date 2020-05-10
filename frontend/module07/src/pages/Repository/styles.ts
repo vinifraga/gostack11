@@ -24,6 +24,7 @@ export const Header = styled.header`
 
 export const RepositoryInfo = styled.section`
   align-items: center;
+  margin-top: 80px;
 
   img {
     width: 120px;
