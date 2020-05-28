@@ -38,7 +38,8 @@
       {
         "argsIgnorePattern": "_"
       }
-    ]
+    ],
+    "@typescript-eslint/interface-name-prefix": ["error", { "prefixWithI": "always" }]
   },
   "settings": {
     "import/resolver": {
