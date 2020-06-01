@@ -1,4 +1,5 @@
 node_modules/
+coverage/
 
 backend/*/tmp/*
 !backend/*/tmp/.gitkeep
