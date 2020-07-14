@@ -10,10 +10,12 @@ import '@shared/infra/typeorm';
 import '@shared/container';
 import uploadConfig from '@config/upload';
 import AppError from '@shared/errors/AppError';
+import rateLimiter from './middlewares/RateLimiter';
 import routes from './routes';
 
 const app = express();
 
+app.use(rateLimiter);
 app.use(cors());
 app.use(express.json());
 app.use('/files', express.static(uploadConfig.uploadsFolder));
@@ -28,8 +30,6 @@ app.use((err: Error, request: Request, response: Response, _: NextFunction) => {
       message: err.message,
     });
   }
-
-  console.error(err);
 
   return response.status(500).json({
     status: 'error',
