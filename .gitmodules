@@ -19,3 +19,6 @@
 [submodule "mobile/challenge09"]
 	path = mobile/challenge09
 	url = git@github.com:vinifraga/GS11C09.git
+[submodule "backend/challenge12"]
+	path = backend/challenge12
+	url = git@github.com:vinifraga/GS11C12.git
