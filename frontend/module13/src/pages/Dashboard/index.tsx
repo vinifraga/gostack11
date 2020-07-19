@@ -1,5 +1,13 @@
 import React, { useState, useCallback, useEffect, useMemo } from 'react';
-import { isToday, format, parseISO, isAfter } from 'date-fns';
+import {
+  isToday,
+  format,
+  parseISO,
+  isAfter,
+  isWeekend,
+  isSunday,
+  addDays,
+} from 'date-fns';
 import ptBR from 'date-fns/locale/pt-BR';
 import DayPicker, { DayModifiers } from 'react-day-picker';
 import 'react-day-picker/lib/style.css';
@@ -39,7 +47,15 @@ interface Appointment {
 
 const Dashboard: React.FC = () => {
   const { signOut, user } = useAuth();
-  const [selectedDate, setSelectedDate] = useState(new Date());
+  const [selectedDate, setSelectedDate] = useState(() => {
+    if (!isWeekend(new Date())) {
+      return new Date();
+    }
+
+    return isSunday(new Date())
+      ? addDays(new Date(), 1)
+      : addDays(new Date(), 2);
+  });
   const [currentMonth, setCurrentMonth] = useState(new Date());
   const [monthAvailability, setMonthAvailability] = useState<
     MonthAvailabilityItem[]
