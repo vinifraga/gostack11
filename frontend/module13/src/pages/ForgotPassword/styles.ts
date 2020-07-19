@@ -1,6 +1,5 @@
 import styled, { keyframes } from 'styled-components';
 import { shade } from 'polished';
-import { animated } from 'react-spring';
 
 import signInBackground from '../../assets/sign-in-background.png';
 
