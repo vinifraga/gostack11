@@ -22,3 +22,6 @@
 [submodule "backend/challenge12"]
 	path = backend/challenge12
 	url = git@github.com:vinifraga/GS11C12.git
+[submodule "frontend/challenge13"]
+	path = frontend/challenge13
+	url = git@github.com:vinifraga/GS11C13.git
