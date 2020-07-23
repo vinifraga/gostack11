@@ -59,7 +59,8 @@
       }
     ],
     "@typescript-eslint/explicit-module-boundary-types": "off",
-    "camelcase": "off"
+    "camelcase": "off",
+    "import/no-duplicates": "off"
   },
   "settings": {
     "import/resolver": {
