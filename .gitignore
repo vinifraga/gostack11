@@ -2,6 +2,7 @@ node_modules/
 coverage/
 **/.env
 **/ormconfig.json
+**/dist/
 
 backend/*/tmp/*
 !backend/*/tmp/.gitkeep
