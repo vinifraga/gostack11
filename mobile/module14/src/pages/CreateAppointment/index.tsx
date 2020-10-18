@@ -64,7 +64,7 @@ const CreateAppointment: React.FC = () => {
   const { goBack, navigate } = useNavigation();
 
   useEffect(() => {
-    api.get('providers').then((response) => {
+    api.get('providers').then(response => {
       setProviders(response.data);
     });
   }, []);
@@ -78,7 +78,7 @@ const CreateAppointment: React.FC = () => {
           day: selectedDate.getDate(),
         },
       })
-      .then((response) => {
+      .then(response => {
         setAvailability(response.data);
       });
   }, [selectedDate, selectedProvider]);
@@ -92,7 +92,7 @@ const CreateAppointment: React.FC = () => {
   }, []);
 
   const handleToggleDatePicker = useCallback(() => {
-    setShowDatePicker((state) => !state);
+    setShowDatePicker(state => !state);
   }, []);
 
   const handleDateChanged = useCallback(
@@ -175,7 +175,8 @@ const CreateAppointment: React.FC = () => {
             horizontal
             showsHorizontalScrollIndicator={false}
             data={providers}
-            keyExtractor={(provider) => provider.id}
+            keyExtractor={provider => provider.id}
+            // contentContainerStyle={{ paddingRight: 32 }}
             renderItem={({ item: provider }) => (
               <ProviderContainer
                 onPress={() => {
