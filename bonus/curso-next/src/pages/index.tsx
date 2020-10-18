@@ -11,20 +11,32 @@ interface HomeProps {
 }
 
 export default function Home({ recommendedProducts }: HomeProps) {
-  return (
-    <section>
-      <Title>Products</Title>
+  async function handleSum() {
+    const math = (await import('../lib/math')).default
 
-      <ul>
-        {recommendedProducts.map(recommendedProduct => {
-          return (
-            <li key={recommendedProduct.id}>
-              {recommendedProduct.title}
-            </li>
-          )
-        })}
-      </ul>
-    </section>
+    alert(math.sum(3, 5));
+  }
+
+  return (
+    <div>
+      <section>
+        <Title>Products</Title>
+
+        <ul>
+          {recommendedProducts.map(recommendedProduct => {
+            return (
+              <li key={recommendedProduct.id}>
+                {recommendedProduct.title}
+              </li>
+            )
+          })}
+        </ul>
+      </section>
+
+      <button onClick={handleSum}>
+        Sum!
+    </button>
+    </div>
   )
 }
 
