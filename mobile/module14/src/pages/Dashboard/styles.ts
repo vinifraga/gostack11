@@ -40,12 +40,12 @@ export const UserAvatar = styled.Image`
 `;
 
 export const ProvidersList = styled(FlatList as new () => FlatList<Provider>)`
-  padding: 32px 24px 16px;
+  padding: 0 24px;
 `;
 
 export const ProvidersListTitle = styled.Text`
   font-size: 24px;
-  margin-bottom: 24px;
+  margin: 32px 0 24px;
   color: #f4ede8;
   font-family: 'RobotoSlab-Medium';
 `;

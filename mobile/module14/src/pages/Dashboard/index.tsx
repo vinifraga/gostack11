@@ -33,7 +33,7 @@ const Dashboard: React.FC = () => {
   const { navigate } = useNavigation();
 
   useEffect(() => {
-    api.get('providers').then((response) => {
+    api.get('providers').then(response => {
       setProviders(response.data);
     });
   }, []);
@@ -67,7 +67,7 @@ const Dashboard: React.FC = () => {
           <ProvidersListTitle>Cabelereiros</ProvidersListTitle>
         }
         data={providers}
-        keyExtractor={(provider) => provider.id}
+        keyExtractor={provider => provider.id}
         renderItem={({ item: provider }) => (
           <ProviderContainer
             onPress={() => {
