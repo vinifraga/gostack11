@@ -24,7 +24,7 @@
     "emitDecoratorMetadata": true,
     "forceConsistentCasingInFileNames": true
   },
-  "include": [ // adiciona esse include
+  "include": [
     "src/**/*"
   ]
 }
